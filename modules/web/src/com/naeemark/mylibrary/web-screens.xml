@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
-
+    <screen id="mylibrary$Book.browse"
+            template="com/naeemark/mylibrary/web/book/book-browse.xml"/>
+    <screen id="mylibrary$Book.edit"
+            template="com/naeemark/mylibrary/web/book/book-edit.xml"/>
 </screen-config>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.naeemark.mylibrary.web.book.BookBrowse"
+        focusComponent="booksTable"
+        lookupComponent="booksTable"
+        messagesPack="com.naeemark.mylibrary.web.book">
+    <dsContext>
+        <groupDatasource id="booksDs"
+                         class="com.naeemark.mylibrary.entity.Book"
+                         view="_local">
+            <query>
+                <![CDATA[select e from mylibrary$Book e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="booksTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="booksTable"
+                datasource="booksDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="booksTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="title"/>
+                <column id="author_name"/>
+                <column id="isbn"/>
+                <column id="cover_image_url"/>
+            </columns>
+            <rows datasource="booksDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="booksTable.create"/>
+                <button id="editBtn"
+                        action="booksTable.edit"/>
+                <button id="removeBtn"
+                        action="booksTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

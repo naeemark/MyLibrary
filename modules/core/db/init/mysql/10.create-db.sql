@@ -1,12 +1,12 @@
 -- begin MYLIBRARY_BOOK
 create table MYLIBRARY_BOOK (
-    ID varchar(36) not null,
+    ID varchar(32),
     VERSION integer not null,
-    CREATE_TS timestamp,
+    CREATE_TS datetime(3),
     CREATED_BY varchar(50),
-    UPDATE_TS timestamp,
+    UPDATE_TS datetime(3),
     UPDATED_BY varchar(50),
-    DELETE_TS timestamp,
+    DELETE_TS datetime(3),
     DELETED_BY varchar(50),
     --
     TITLE varchar(255) not null,

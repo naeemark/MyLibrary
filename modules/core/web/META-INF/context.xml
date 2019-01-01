@@ -1,18 +1,23 @@
 <Context>
-
     <!-- Database connection -->
-    <Resource
-      name="jdbc/CubaDS"
-      type="javax.sql.DataSource"
-      maxTotal="20"
-      maxIdle="2"
-      maxWaitMillis="5000"
-      driverClassName="org.hsqldb.jdbc.JDBCDriver"
-      url="jdbc:hsqldb:hsql://localhost/mylibrary"
-      username="sa"
-      password=""/>
-
+    <Resource driverClassName="com.mysql.jdbc.Driver"
+              maxIdle="2"
+              maxTotal="20"
+              maxWaitMillis="5000"
+              name="jdbc/CubaDS"
+              password="admin_sql"
+              type="javax.sql.DataSource"
+              url="jdbc:mysql://db4free.net/my_lib_0?useSSL=false&amp;allowMultiQueries=true"
+              username="admin_sql"/>
     <!-- Switch off session serialization -->
     <Manager pathname=""/>
-
+    <!--<Resource driverClassName="org.hsqldb.jdbc.JDBCDriver"
+          maxIdle="2"
+          maxTotal="20"
+          maxWaitMillis="5000"
+          name="jdbc/CubaDS"
+          password=""
+          type="javax.sql.DataSource"
+          url="jdbc:hsqldb:hsql://localhost/mylibrary"
+          username="sa"/>-->
 </Context>

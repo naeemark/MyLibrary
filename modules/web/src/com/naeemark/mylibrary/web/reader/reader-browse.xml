@@ -26,14 +26,17 @@
         <groupTable id="readersTable"
                     width="100%">
             <actions>
-                <action id="create" openType="DIALOG"/>
-                <action id="edit" openType="DIALOG"/>
+                <action id="create"
+                        openType="DIALOG"/>
+                <action id="edit"
+                        openType="DIALOG"/>
                 <action id="remove"/>
             </actions>
             <columns>
                 <column id="name"/>
                 <column id="email"/>
                 <column id="date_of_birth"/>
+                <column id="picture_url"/>
             </columns>
             <rows datasource="readersDs"/>
             <rowsCount/>

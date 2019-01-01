@@ -18,6 +18,7 @@
                 <field property="name"/>
                 <field property="email"/>
                 <field property="date_of_birth"/>
+                <field property="picture_url"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

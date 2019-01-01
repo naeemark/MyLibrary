@@ -29,6 +29,7 @@ create table MYLIBRARY_READER (
     DELETED_BY varchar(50),
     --
     NAME varchar(255) not null,
+    PICTURE_URL varchar(255) not null,
     EMAIL varchar(255) not null,
     DATE_OF_BIRTH date not null,
     --

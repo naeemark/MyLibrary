@@ -21,6 +21,10 @@ public class Reader extends StandardEntity {
     protected String name;
 
     @NotNull
+    @Column(name = "PICTURE_URL", nullable = false)
+    protected String picture_url;
+
+    @NotNull
     @Column(name = "EMAIL", nullable = false)
     protected String email;
 
@@ -28,6 +32,15 @@ public class Reader extends StandardEntity {
     @NotNull
     @Column(name = "DATE_OF_BIRTH", nullable = false)
     protected Date date_of_birth;
+
+    public void setPicture_url(String picture_url) {
+        this.picture_url = picture_url;
+    }
+
+    public String getPicture_url() {
+        return picture_url;
+    }
+
 
     public void setName(String name) {
         this.name = name;

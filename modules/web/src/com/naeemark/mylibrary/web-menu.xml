@@ -3,5 +3,6 @@
     <menu id="application-mylibrary"
           insertBefore="administration">
         <item screen="mylibrary$Book.browse"/>
+        <item screen="mylibrary$Reader.browse"/>
     </menu>
 </menu-config>

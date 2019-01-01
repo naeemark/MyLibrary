@@ -4,4 +4,8 @@
             template="com/naeemark/mylibrary/web/book/book-browse.xml"/>
     <screen id="mylibrary$Book.edit"
             template="com/naeemark/mylibrary/web/book/book-edit.xml"/>
+    <screen id="mylibrary$Reader.browse"
+            template="com/naeemark/mylibrary/web/reader/reader-browse.xml"/>
+    <screen id="mylibrary$Reader.edit"
+            template="com/naeemark/mylibrary/web/reader/reader-edit.xml"/>
 </screen-config>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.naeemark.mylibrary.web.reader.ReaderEdit"
+        datasource="readerDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.naeemark.mylibrary.web.reader">
+    <dsContext>
+        <datasource id="readerDs"
+                    class="com.naeemark.mylibrary.entity.Reader"
+                    view="_local"/>
+    </dsContext>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="readerDs">
+            <column width="250px">
+                <field property="name"/>
+                <field property="email"/>
+                <field property="date_of_birth"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

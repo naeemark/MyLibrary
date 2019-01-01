@@ -4,5 +4,6 @@
     <persistence-unit name="MyLibrary"
                       transaction-type="RESOURCE_LOCAL">
         <class>com.naeemark.mylibrary.entity.Book</class>
+        <class>com.naeemark.mylibrary.entity.Reader</class>
     </persistence-unit>
 </persistence>

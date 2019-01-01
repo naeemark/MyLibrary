@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.naeemark.mylibrary.web.reader.ReaderBrowse"
+        focusComponent="readersTable"
+        lookupComponent="readersTable"
+        messagesPack="com.naeemark.mylibrary.web.reader">
+    <dsContext>
+        <groupDatasource id="readersDs"
+                         class="com.naeemark.mylibrary.entity.Reader"
+                         view="_local">
+            <query>
+                <![CDATA[select e from mylibrary$Reader e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="readersTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="readersTable"
+                datasource="readersDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="readersTable"
+                    width="100%">
+            <actions>
+                <action id="create" openType="DIALOG"/>
+                <action id="edit" openType="DIALOG"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="email"/>
+                <column id="date_of_birth"/>
+            </columns>
+            <rows datasource="readersDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="readersTable.create"/>
+                <button id="editBtn"
+                        action="readersTable.edit"/>
+                <button id="removeBtn"
+                        action="readersTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>
